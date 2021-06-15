@@ -1,6 +1,6 @@
 const cardArtista = document.querySelector(".card-artistas")
 
-async function escreveNome() {
+async function adicionaArtista() {
     
     try {
       const responseAsync = await fetch("https://reqres.in/api/users?page=2");
@@ -26,11 +26,11 @@ async function escreveNome() {
         artistaEmail.setAttribute("class", "email-artista")
 
 
-        console.log(nomeArtista)
-        console.log(index)
-        console.log(cardArtista)
-        console.log(artistaNome)
-        console.log(emailArtista)
+        // console.log(nomeArtista)
+        // console.log(index)
+        // console.log(cardArtista)
+        // console.log(artistaNome)
+        // console.log(emailArtista)
         artistaNome.textContent = nomeArtista 
         artistaEmail.textContent = emailArtista
         cardArtista.appendChild(containerArtistas)
@@ -49,4 +49,4 @@ async function escreveNome() {
     }
   }
 
-  escreveNome()
+  adicionaArtista()
